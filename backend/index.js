@@ -37,4 +37,10 @@ app.post('/send-alert', async (req, res) => {
   }
 });
 
+
+app.get("/", async (req,res) => {
+    res.send("Welcome")
+})
+
+
 app.listen(process.env.PORT, () => console.log(`Server running on port http://localhost:${process.env.PORT}`));
