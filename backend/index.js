@@ -17,7 +17,7 @@ const twilioClient = twilio(accountSid, authToken);
 const twilioPhone = process.env.TWILIO_NUMBER;
 
 // Endpoint that Python model will call
-app.post('/', async (req, res) => {
+app.post('/send-alert', async (req, res) => {
   const { species, location, time } = req.body;
   const message = `${species} detected at ${location} at time ${time}`
   const to = "+919321685221"
